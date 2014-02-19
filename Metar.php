@@ -3,13 +3,13 @@
 // Module for parsing and processing METAR data.
 ////////////////////////////////////////////////////////////////////////
 
-namespace metar_taf;
+// namespace metar_taf;
 
 
 /**
  * Exception thrown when a METAR can't be parsed.
  */
-class MetarParsingException extends \Exception {
+class MetarParsingException extends Exception {
 
   public $error_message;
   public $token;
@@ -26,7 +26,7 @@ class MetarParsingException extends \Exception {
 /**
  * Wind information from a METAR report.
  */
-class MetarWind extends \stdClass {
+class MetarWind extends stdClass {
 
   public $raw;
   public $direction;
@@ -206,7 +206,7 @@ class MetarWeatherType extends \stdClass {
  *
  * This class describes a single cloud layer.
  */
-class MetarCloudLayer extends \stdClass {
+class MetarCloudLayer extends stdClass {
   public $raw;
   public $coverage;
   public $altitude;
@@ -248,7 +248,7 @@ class MetarCloudLayer extends \stdClass {
 /**
  * Temperature and dewpoint from a METAR report.
  */
-class MetarTemperature extends \stdClass {
+class MetarTemperature extends stdClass {
   public $raw;
   public $temperature;
   public $dewpoint;
@@ -285,7 +285,7 @@ class MetarTemperature extends \stdClass {
 /**
  * Altimeter setting from a METAR report.
  */
-class MetarAltimeter extends \stdClass {
+class MetarAltimeter extends stdClass {
 
   public $raw;
   public $altimeter;
@@ -324,7 +324,7 @@ class MetarAltimeter extends \stdClass {
  *
  * See http://www.ivao.aero/training/tutorials/metar/metar.htm
  */
-class MetarRunwayConditions extends \stdClass {
+class MetarRunwayConditions extends stdClass {
 
   public $raw;
   public $runway;
@@ -415,7 +415,7 @@ class MetarRunwayConditions extends \stdClass {
 /** 
  * A full METAR report.
  */
-class Metar extends \stdClass {
+class Metar extends stdClass {
 
   public $raw;
   public $airport;

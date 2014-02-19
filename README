@@ -1,8 +1,14 @@
+# METAR and TAF Parser
+
+This is a pre-php 5.3 fork for those forced to use this awesome METAR/TAF parser in a no namespace environment.
+
+
+
 This is a free (as in Public Domain -- see the file UNLICENSE) PHP library for parsing METAR aviation weather reports, with TAF aviation forecasts soon to come.
 
 You use the class like this:
 
-  $metar = new \metar_taf\Metar($report);
+  $metar = new Metar($report);
 
 Where $report is a textual METAR like "EGLL 021250Z 23009KT 9999 SCT023 BKN029 08/06 Q1024".
 
